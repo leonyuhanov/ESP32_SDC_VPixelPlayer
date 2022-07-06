@@ -4,6 +4,7 @@ ESP32 CD Card Animation Player for APA102/SK9822 Pixels
 # Libraries Used
 
 APA102 SPI Driver - https://github.com/leonyuhanov/esp8266apa102driver modified with advaced pixel mapping functions
+
 ESP32 PNG Library - https://github.com/lagunax/ESP32-upng - modified to work with SD card instead of SPIFFS
 
 
