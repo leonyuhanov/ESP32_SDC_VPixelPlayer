@@ -39,7 +39,7 @@ Example layout of the "playlist" file
 AnimationOne,100,10;AnimationTwo,200,20;AnimationThree,50,100;
 ````
 
-#Boot Up Flow
+# Boot Up Flow
 
 1.  Insert the SD CARD and power on
 2.  The Pre prosessor will RUN over the playlist and compile a .STREAM file for each animation. You will see a new folder for each animation called "AnimationNameSTREAM" and inside it will be teh stream file named "AnimationName.STREAM"
