@@ -8,6 +8,13 @@ APA102 SPI Driver - https://github.com/leonyuhanov/esp8266apa102driver modified 
 ESP32 PNG Library - https://github.com/lagunax/ESP32-upng - modified to work with SD card instead of SPIFFS
 
 
+# Animation Pre requisites
+
+Your animation must be in .png 24BIT colour, no transparency or anythhing else fancy. 
+The animation must be sized to be the exact same size as your maped LED matrix.
+The animation must start with a "AnimationName_00000.png" frame and you can have up to 99,999 frames per animation.
+You can also set a frame delay in the playlist file below if you want to slow down or speed up the playback.
+
 # SDCARD Pre requisites
 
 Format the SDCARD as one FAT32 Volume. Size isnt important. The root of the SDCard needs to have the following structure:
