@@ -73,6 +73,10 @@ const short int deadValue=-1;
 ````
 Note the presense of the "deadValue" var set to -1. This lets you create maps that dont have pixels in every physical location.
 
+# Pinout for the Wemos D32 Pro module
+
+<img src="PinOut.PNG" width="400" />
+
 
 # Boot Up Flow
 
