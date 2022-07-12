@@ -59,7 +59,7 @@ AnimationOne,100,10;AnimationTwo,200,20;AnimationThree,50,100;
 
 This code is set up to drive a panel of 255 x APA102 set up on a panel 17 pixels wide and 15 pixels tall. The panel was made with 17 strips of 15 pixels that were laid out verticaly in a SNAKING fashion. Pixel 0 is at the bottom left, this goes UP then right than down then right then up then right etc...
 
-<img src="LedPanel.jpg" width="400" />
+<img src="LedPanel.jpg" width="600" />
 
 To create the pixel map there is an included (Libre Office) spread sheet "PixelMap.ods" that you can use to make a pixel map for ANY layotu of LEDS. The file generates a 2D C++ array that you can paste directly into the code into the "maskMap" variable. 
 
