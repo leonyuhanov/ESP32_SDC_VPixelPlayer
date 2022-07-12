@@ -75,7 +75,7 @@ Note the presense of the "deadValue" var set to -1. This lets you create maps th
 
 # Pinout for the Wemos D32 Pro module
 
-<img src="PinOut.PNG" width="400" />
+<img src="PinOut.PNG" width="600" />
 
 
 # Boot Up Flow
