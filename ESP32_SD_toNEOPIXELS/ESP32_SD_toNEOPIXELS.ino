@@ -437,7 +437,7 @@ void renderBitmap()
   {
     for(bitMapX=0; bitMapX<cols; bitMapX++)
     {
-      tempAddress = getRealAddress(bitMapX, bitMapY, maskMap);
+      tempAddress = getRealAddress(bitMapX, bitMapY);
       if(tempAddress!=deadValue)
       {
         memcpy(innerColour, bitmap[bitMapY][bitMapX], bytesPerLed);
