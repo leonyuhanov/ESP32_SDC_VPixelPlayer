@@ -44,7 +44,7 @@ unsigned short int cIndex=0, secondaryCIndex=0;
 unsigned short int yCnt=0, xCnt=0;
 
 //LEDs
-NeoViaSPI leds(numOfPixels);
+NeoViaSPI leds(numLeds);
 
 //File Paths
 char playListFile[] = "/playlist";
