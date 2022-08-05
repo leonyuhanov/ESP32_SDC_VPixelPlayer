@@ -86,13 +86,9 @@ void setup()
   hspi->setBitOrder(MSBFIRST);
   hspi->setFrequency(2900000);
   
-  //Set up the pixel map
-  assignMapToLEDArray();
-  
-  //Clear bitmap memory
+   //Clear bitmap memory
   clearBitmap();
   //Render black twice
-  renderLEDs();
   renderLEDs();
 }
 
