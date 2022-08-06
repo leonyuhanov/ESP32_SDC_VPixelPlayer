@@ -101,7 +101,7 @@ void initFS()
 {
   Serial.printf("\r\n\tSetting up SD Card FS...");
   
-  HSPIPort.begin();
+  HSPIPort.begin(14, 2, 15, 13);
   HSPIPort.setFrequency(40000000);
   if(! SD.begin(SS, HSPIPort, 40000000, "/sd", 5, false) )
   {
