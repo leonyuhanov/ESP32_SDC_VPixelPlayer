@@ -15,7 +15,7 @@ CD(1)	G	GND
 PINOUT for APA102
 
 HSPI CLK	IO_18	->	SN74HCT245N	->	CLOCK PIN of APA102
-HSPI MOSI	IO_23	->	SN74HCT245N	->	DATA PIN of APA102
+HSPI MOSI	IO_33	->	SN74HCT245N	->	DATA PIN of APA102
  */
 
 #include <WiFi.h>
@@ -58,6 +58,7 @@ unsigned short int xCount, yCount, imageSize, bufferIndex=0, testCnt=0;
 
 //SPI
 SPIClass HSPIPort(HSPI);
+SPIClass VSPIPort(VSPI);
 uint8_t cardType=0;
 long cardSize=0;
 
@@ -84,9 +85,9 @@ void setup()
   
   //Start SPI
   //SPI.begin();
-  SPI.begin(18, 19, 23, 04);
-  SPI.setBitOrder(MSBFIRST);
-  SPI.setFrequency(10000000);  
+  VSPIPort.begin(18, 19, 33, 04);
+  VSPIPort.setBitOrder(MSBFIRST);
+  VSPIPort.setFrequency(10000000);  
   
   //Set up the pixel map
   assignMapToLEDArray();
@@ -470,7 +471,7 @@ short int getRealAddress(byte xPos, byte yPos)
 void renderLEDs()
 {
   leds.renderFrame();
-  SPI.writeBytes(leds.SPIFrame, leds._frameLength);
+  VSPIPort.writeBytes(leds.SPIFrame, leds._frameLength);
 
 }
 

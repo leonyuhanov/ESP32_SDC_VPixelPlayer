@@ -14,7 +14,7 @@ CD(1)	G	GND
 
 PINOUT for Neopixels/WS812/SK6805/SK6812
 
-SPI MOSI	IO_23	->	SN74HCT245N	->	DATA PIN of Neopixel
+SPI MOSI	IO_33	->	SN74HCT245N	->	DATA PIN of Neopixel
  */
 
 #include <WiFi.h>
@@ -55,7 +55,7 @@ upng_t* upng;
 unsigned short int xCount, yCount, imageSize, bufferIndex=0, testCnt=0;
 
 //SPI
-//SPIClass * hspi = NULL;
+SPIClass VSPIPort(VSPI);
 SPIClass HSPIPort(HSPI);
 uint8_t cardType=0;
 long cardSize=0;
@@ -82,9 +82,9 @@ void setup()
   compileStream();
   
   //Start SPI
-  SPI.begin(18, 19, 23, 04);
-  SPI.setBitOrder(MSBFIRST);
-  SPI.setFrequency(2900000);  
+  VSPIPort.begin(18, 19, 33, 04);
+  VSPIPort.setBitOrder(MSBFIRST);
+  VSPIPort.setFrequency(2900000);  
    //Clear bitmap memory
   clearBitmap();
   //Render black twice
@@ -421,7 +421,7 @@ void renderLEDs()
 {
   renderBitmap();
   leds.encode();
-  SPI.writeBytes(leds.neoBits, leds._NeoBitsframeLength);
+  VSPIPort.writeBytes(leds.neoBits, leds._NeoBitsframeLength);
 
 }
 
