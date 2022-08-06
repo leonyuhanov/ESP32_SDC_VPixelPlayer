@@ -82,7 +82,7 @@ void setup()
   compileStream();
   
   //Start SPI
-  SPI.begin();
+  SPI.begin(18, 19, 23, 04);
   SPI.setBitOrder(MSBFIRST);
   SPI.setFrequency(2900000);  
    //Clear bitmap memory
