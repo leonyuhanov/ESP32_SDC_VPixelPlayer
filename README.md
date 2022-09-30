@@ -73,6 +73,8 @@ const short int deadValue=-1;
 ````
 Note the presense of the "deadValue" var set to -1. This lets you create maps that dont have pixels in every physical location.
 
+IN VERSION 2 "ESP32_SD_toNEOPIXELS_V2" the pixel map is loaded from a text file in the root of the SD Card called "pixelmap". The file is loaded at boot and can be changed any time. Open PixelMap.ods, copy the contents cell DD19 and paste directly into the "pixelmap" file using notepad or notepad++
+
 # Pinout for the Wemos D32 Pro module
 
 <img src="PinOut.PNG" width="600" />
